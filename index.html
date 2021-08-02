@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pricing Cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Pricing Plans</h1>
+        <p>Choose your best plan by switching between the different prices</p>
+        <div class="top">
+            <div class="toggle-btn">
+                <span style="margin: 0.8em;">Annually</span>
+                <label class="switch">
+                    <input type="checkbox" id="checkbox" onclick="check()">
+                    <span class="slider round"></span>
+                </label>
+                <span style="margin: 0.8em">Monthly</span>
+            </div>
+        </div>
+
+
+        <div class="package-container">
+
+            <div class="packages">
+                <img src="image/men1.jpg" alt="">
+                <h1 class="first">BASIC</h1>
+                <h2 class="text1">&dollar;14</h2>
+                <h2 class="text2">&dollar;20</h2>
+                <ul class="list">
+                    <li>5 Projects</li>
+                    <li>Get 10 Getty pics</li>
+                </ul>
+                <a href="#" class="button">Choose ></a>
+            </div>
+
+            <div class="packages">
+                <img src="image/men2.jpg" alt="">
+                    <h1 class="first">PLUS</h1>
+                    <h2 class="text1">&dollar;74</h2>
+                    <h2 class="text2">&dollar;99</h2>
+                    <ul class="list">
+                      <li>10 Projects</li>
+                      <li>Get 10 Getty pics</li>
+                      
+                    </ul>
+                    <a href="#" class="button">Choose ></a>
+                  </div>
+            
+                <div class="packages">
+                    <img id="image" src="image/men3.png" alt="">
+                    <h1 class="first">PRO</h1>
+                    <h2 class="text1">&dollar;140</h2>
+                    <h2 class="text2">&dollar;195</h2>
+                    <ul class="list">
+                        <li>30 Projects</li>
+                        <li>Get 10 Getty pics</li>
+                       
+                    </ul>
+                    <a href="#" class="button">Choose ></a>
+                </div>
+                <!-- <div class="packages1">
+                    
+                    <ul class="list">
+                        <li>30 Projects</li>
+                        <li>Get 10 Getty pics</li>
+                       
+                    </ul>
+                    
+                </div> -->
+    </div>
+
+</div>
+
+
+
+<script>
+
+
+    function check(){
+        var checkBox = document.getElementById("checkbox");
+        var text1 = document.getElementsByClassName("text1");
+        var text2 = document.getElementsByClassName("text2");
+
+        for (var i=0; i < text1.length; i++){
+            if(checkBox.checked == true){
+                text1[i].style.display = "block";
+                text2[i].style.display = "none";
+            }
+            else if (checkBox.checked == false){
+                text1[i].style.display = "none";
+                text2[i].style.display = "block";
+            }
+        }
+    }
+
+check();
+function box(){
+    var box=document.getElementById("seemore");
+    var show=document.getElementsByClassName("package1");
+    if(box==true){
+        box.style.display="block";
+        show.style.display="none";
+    }
+    else{
+        box.style.display="none";
+        show.style.display="block";
+    }
+}
+box();
+</script>
+
+</body>
+</html>
